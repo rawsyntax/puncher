@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.authors = ["Eric Himmelreich"]
   s.date = %q{2010-01-25}
   s.default_executable = %q{puncher}
-  s.description = %q{Go for the knockout punch}
+  s.description = %q{TODO: longer description of your gem}
   s.email = %q{eahimmel@gmail.com}
   s.executables = ["puncher"]
   s.extra_rdoc_files = [
@@ -25,7 +25,9 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "bin/puncher",
      "lib/puncher.rb",
+     "puncher.gemspec",
      "spec/puncher_spec.rb",
      "spec/spec.opts",
      "spec/spec_helper.rb"
@@ -34,7 +36,7 @@ Gem::Specification.new do |s|
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.5}
-  s.summary = %q{When kicker is too complicated, go for the knock out punch}
+  s.summary = %q{Watch files and execute a command.  Simpler than kicker}
   s.test_files = [
     "spec/puncher_spec.rb",
      "spec/spec_helper.rb"
@@ -46,14 +48,11 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
       s.add_development_dependency(%q<rspec>, [">= 1.2.9"])
-      s.add_dependency(%q<ruby-fsevent>, [">= 0.2.1"])
     else
       s.add_dependency(%q<rspec>, [">= 1.2.9"])
-      s.add_dependency(%q<ruby-fsevent>, [">= 0.2.1"])
     end
   else
     s.add_dependency(%q<rspec>, [">= 1.2.9"])
-    s.add_dependency(%q<ruby-fsevent>, [">= 0.2.1"])
   end
 end
 
