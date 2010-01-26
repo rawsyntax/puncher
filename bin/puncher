@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+require File.expand_path(File.dirname(__FILE__) + '/../lib/puncher')
+
+
+if ARGV.length >= 2
+  Puncher.new(ARGV.shift, ARGV)
+else
+  puts "you fail at reading source, I'll add a USAGE message later"
+end
