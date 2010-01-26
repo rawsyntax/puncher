@@ -12,6 +12,7 @@ begin
     gem.authors = ["Eric Himmelreich"]
     gem.add_development_dependency "rspec", ">= 1.2.9"
     gem.add_dependency "ruby-fsevent", ">=0.2.1"
+    gem.post_install_message = "Go for the knockout punch"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
