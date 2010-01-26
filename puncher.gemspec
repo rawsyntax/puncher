@@ -33,6 +33,7 @@ Gem::Specification.new do |s|
      "spec/spec_helper.rb"
   ]
   s.homepage = %q{http://github.com/himmel/puncher}
+  s.post_install_message = %q{Go for the knockout punch}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.5}
