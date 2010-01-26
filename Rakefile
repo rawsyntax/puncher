@@ -5,12 +5,13 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "puncher"
-    gem.summary = %Q{Watch files and execute a command.  Simpler than kicker}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{Watch files, execute command.  Simpler than kicker, go for the knockout punch}
+    gem.description = %Q{Go for the knockout punch}
     gem.email = "eahimmel@gmail.com"
     gem.homepage = "http://github.com/himmel/puncher"
     gem.authors = ["Eric Himmelreich"]
     gem.add_development_dependency "rspec", ">= 1.2.9"
+    gem.add_dependency "ruby-fsevent", ">=0.2.1"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
