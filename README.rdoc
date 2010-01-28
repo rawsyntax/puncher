@@ -6,7 +6,7 @@ require 'ruby-fsevents' # thats all
 
 When kicker is too complicated,  go for the knockout punch.
 
-`puncher command dir_glob`
+`puncher 'command' dir_glob`
 
 == Note on Patches/Pull Requests
  
