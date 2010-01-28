@@ -8,20 +8,19 @@ end
 class Puncher < FSEvent
 
   def initialize(command, files)
-    @command, @files, @latency = command, files, 0.2
-    @last_time = Time.now
+    @command, @files, @latency, @last_time = command, files, 0.2, Time.now
 
     start
   end
 
   def start
-    @dirs = []
+    dirs = []
 
     @files.each do |f|
-      @dirs << File.dirname(f)
+      dirs << File.dirname(f)
     end
 
-    watch_directories(@dirs.uniq)
+    watch_directories(dirs.uniq)
     super
   end
 
