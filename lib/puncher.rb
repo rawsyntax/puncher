@@ -8,31 +8,22 @@ end
 class Puncher < FSEvent
 
   def initialize(command, files)
-    @command, @files, @latency, @last_time = command, files, 0.2, Time.now
+    @command, @files, @latency, @last_sec = command, files, 0.2, Time.now
 
     start
   end
 
   def start
-    dirs = []
-
-    @files.each do |f|
-      dirs << File.dirname(f)
-    end
-
-    watch_directories(dirs.uniq)
+    watch_directories((@files.collect { |f| File.dirname(f) }).uniq)
     super
   end
 
   def on_change(directories)
-    time = @last_time
+    time = @last_sec
 
-    @files.each do |f|
-      if File.mtime(f) > @last_time
-        @last_time = File.mtime(f)
-      end
-    end
+    @files.each { |f| @last_sec = File.mtime(f) if File.mtime(f) > @last_sec }
 
-    system @command unless time == @last_time
+    system @command unless time == @last_sec
   end
+
 end
